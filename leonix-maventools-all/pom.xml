@@ -13,4 +13,9 @@
 			<email>Ken.Audenaert@leonix.be</email>
 		</developer>
 	</developers>
+	
+	<modules>
+		<module>leonix-parentpom</module>
+		<module>leonix-dependencies</module>
+	</modules>
 </project>
