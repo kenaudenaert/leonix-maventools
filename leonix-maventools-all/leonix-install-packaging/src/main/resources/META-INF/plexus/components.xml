@@ -1,0 +1,30 @@
+<component-set>
+    <components>
+        <component>
+            <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+            <role-hint>landc-install</role-hint>
+            <implementation>
+                org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+            </implementation>
+            <configuration>
+                <phases>
+                	<compile>org.apache.maven.plugins:maven-compiler-plugin:compile</compile>
+                    <process-resources>org.apache.maven.plugins:maven-resources-plugin:resources</process-resources>
+                    <test-compile>org.apache.maven.plugins:maven-compiler-plugin:compile</test-compile>
+                   
+                    <process-test-resources>org.apache.maven.plugins:maven-resources-plugin:testResources</process-test-resources>
+                   <!-- <prepare-package/>-->
+                   <!-- <package>be.landc:mavenplugin-zipartifact:zip</package>
+                     <pre-integration-test/>-->
+
+                    <integration-test>org.apache.maven.plugins:maven-failsafe-plugin:integration-test</integration-test>
+                    <verify>org.apache.maven.plugins:maven-failsafe-plugin:verify</verify>
+                   <!--  <post-integration-test/>-->
+                   <install>org.apache.maven.plugins:maven-install-plugin:install</install>
+				   <deploy>org.apache.maven.plugins:maven-deploy-plugin:deploy</deploy>
+     
+                </phases>
+            </configuration>
+        </component>
+    </components>
+</component-set>
