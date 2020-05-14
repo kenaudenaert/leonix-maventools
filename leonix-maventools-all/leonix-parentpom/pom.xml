@@ -97,8 +97,8 @@
 					<execution>
 						<id>checkstyle</id>
 						<configuration>
-							<configLocation>be/landc/checkstyle/checkstyle.xml</configLocation>
-							<packageNamesLocation>be/landc/checkstyle/packagenames.xml</packageNamesLocation>
+							<configLocation>be/leonix/checkstyle/checkstyle.xml</configLocation>
+							<packageNamesLocation>be/leonix/checkstyle/packagenames.xml</packageNamesLocation>
 							<logViolationsToConsole>true</logViolationsToConsole>
 							<failOnViolation>true</failOnViolation>
 							<failsOnError>true</failsOnError>
@@ -386,9 +386,9 @@
 					<version>2.17</version>
 					<dependencies>
 						<dependency>
-							<groupId>be.landc</groupId>
-							<artifactId>landc-checkstyle</artifactId>
-							<version>1.0.4</version>
+							<groupId>be.leonix</groupId>
+							<artifactId>leonix-checkstyle</artifactId>
+							<version>1.0.0-SNAPSHOT</version>
 						</dependency>
 					</dependencies>
 				</plugin>

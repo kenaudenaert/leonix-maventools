@@ -19,8 +19,9 @@
 	</developers>
 	
 	<modules>
+		<module>leonix-checkstyle</module>
 		<module>leonix-dependencies</module>
-		<module>leonix-parentpom</module>
 		<module>leonix-install-packaging</module>
+		<module>leonix-parentpom</module>
 	</modules>
 </project>
