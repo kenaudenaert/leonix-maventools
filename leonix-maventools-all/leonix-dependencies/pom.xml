@@ -7,10 +7,6 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
-	<prerequisites>
-		<maven>3.0</maven>
-	</prerequisites>
-	
 	<properties>
 		<jide.version>3.7.0</jide.version>
 		<spring.version>4.3.16.RELEASE</spring.version>
