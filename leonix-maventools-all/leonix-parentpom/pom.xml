@@ -91,29 +91,6 @@
 		<defaultGoal>install</defaultGoal>
 		<plugins> <!-- in ALPHABETIC order group / artifact -->
 			<plugin>
-				<groupId>be.landc</groupId>
-				<artifactId>mavenplugin-buildhelper</artifactId>
-				<executions>
-					<execution>
-						<id>analyze-dependencies</id>
-						<phase>compile</phase>
-						<configuration>
-							<ignoreDirect>false</ignoreDirect>
-							<failBuild>false</failBuild>
-						</configuration>
-						<goals>
-							<goal>analyze-dep-mgt-ext</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>enforce-no-snapshot-for-landc-dependencies</id>
-						<goals>
-							<goal>no-landc-dependencies-snapshot</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<executions>
@@ -311,7 +288,7 @@
 						</manifest>
 						<manifestEntries>
 							<Implementation-Version>${project.version}-${buildNumber}</Implementation-Version>
-							<Implementation-Vendor>Language and Computing</Implementation-Vendor>
+							<Implementation-Vendor>Leonix</Implementation-Vendor>
 						</manifestEntries>
 						<addMavenDescriptor>false</addMavenDescriptor>
 					</archive>
@@ -388,19 +365,6 @@
 		
 		<pluginManagement>
 			<plugins> <!-- in ALPHABETIC order group / artifact -->
-				<plugin>
-					<groupId>be.landc</groupId>
-					<artifactId>mavenplugin-buildhelper</artifactId>
-					<version>1.0.23</version>
-					<configuration>
-						<reportFile>${project.basedir}/target/dependency-report.csv</reportFile>
-						<reportToConsole>true</reportToConsole>
-						<reportArtifactWithoutUpdate>false</reportArtifactWithoutUpdate>
-						<suppressSnapshotUpdates>true</suppressSnapshotUpdates>
-						<suppressedQualifierPattern>(.*alpha.*)|(.*beta.*)|(.*dev.*)|(.*incubating.*)|(m\d+)|(rc\d*)|(pr\d+)</suppressedQualifierPattern>
-						<suppressedVersionFile>${project.basedir}/src/dependencyreport/suppressedversions.txt</suppressedVersionFile>
-					</configuration>
-				</plugin>
 				<plugin>
 					<groupId>com.google.code.maven-replacer-plugin</groupId>
 					<artifactId>maven-replacer-plugin</artifactId>
