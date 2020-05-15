@@ -6,8 +6,8 @@
 
 <module name="Checker">
 	<module name="TreeWalker">
-		<module name="be.landc.checkstyle.PrintStackTraceCheck"/>
-		<module name="be.landc.checkstyle.PrintlnCheck"/>
+		<module name="be.leonix.checkstyle.PrintStackTraceCheck"/>
+		<module name="be.leonix.checkstyle.PrintlnCheck"/>
 		
 		<module name="IllegalImport">
 			<property name="illegalPkgs" value="java.util.logging"/>

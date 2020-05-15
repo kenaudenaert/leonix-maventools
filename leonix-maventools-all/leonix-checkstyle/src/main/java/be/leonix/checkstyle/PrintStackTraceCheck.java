@@ -1,13 +1,13 @@
-package be.landc.checkstyle;
+package be.leonix.checkstyle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.puppycrawl.tools.checkstyle.api.Check;
+import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
-public class PrintStackTraceCheck extends Check {
+public class PrintStackTraceCheck extends AbstractCheck {
 
 	@Override
 	public int[] getDefaultTokens() {
@@ -44,5 +44,15 @@ public class PrintStackTraceCheck extends Check {
 			child = child.getNextSibling();
 		}
 		return children;
+	}
+	
+	@Override
+	public int[] getAcceptableTokens() {
+		return getDefaultTokens();
+	}
+	
+	@Override
+	public int[] getRequiredTokens() {
+		return getDefaultTokens();
 	}
 }

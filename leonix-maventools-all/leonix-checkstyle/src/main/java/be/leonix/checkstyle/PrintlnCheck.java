@@ -1,11 +1,11 @@
-package be.landc.checkstyle;
+package be.leonix.checkstyle;
 
-import com.puppycrawl.tools.checkstyle.api.Check;
+import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.FullIdent;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
-public class PrintlnCheck extends Check {
+public class PrintlnCheck extends AbstractCheck {
 
 	@Override
 	public int[] getDefaultTokens() {
@@ -28,5 +28,15 @@ public class PrintlnCheck extends Check {
 				log(methodCall, "calls to println are not allowed, use a Logger for logging!");
 			}
 		}
+	}
+	
+	@Override
+	public int[] getAcceptableTokens() {
+		return getDefaultTokens();
+	}
+	
+	@Override
+	public int[] getRequiredTokens() {
+		return getDefaultTokens();
 	}
 }
