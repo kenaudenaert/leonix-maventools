@@ -72,11 +72,6 @@
 									<windowtitle>Leonix Documentation</windowtitle>
 									<doctitle>Leonix Documentation</doctitle>
 									<show>public</show>
-									<!-- JDK8: extra addition -->
-									<!-- pre 3.0.0 config
-									<additionalparam>-Xdoclint:none</additionalparam>
-									-->
-									<!-- TODO ideally we enable doclint, but that requires fixing quite some java docs -->
 									<doclint>none</doclint>
 								</configuration>
 							</execution>
@@ -96,6 +91,9 @@
 				<executions>
 					<execution>
 						<id>checkstyle</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
 						<configuration>
 							<configLocation>be/leonix/checkstyle/checkstyle.xml</configLocation>
 							<packageNamesLocation>be/leonix/checkstyle/packagenames.xml</packageNamesLocation>
@@ -105,9 +103,6 @@
 							<includeTestSourceDirectory>false</includeTestSourceDirectory>
 							<consoleOutput>true</consoleOutput>
 						</configuration>
-						<goals>
-							<goal>check</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>
@@ -163,9 +158,22 @@
 							<rules>
 								<requireMavenVersion>
 									<version>[${maven.version},)</version>
-									<message>Check for Maven version &gt;=${maven.version} failed.
-										Update your Maven install.</message>
+									<message>Check for Maven version &gt;=${maven.version} failed.</message>
 								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+					<execution>
+						<id>enforce java runtime version</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireJavaVersion>
+									<version>[1.8,1.9)</version>
+									<message>Check for JDK version failed.</message>
+								</requireJavaVersion>
 							</rules>
 						</configuration>
 					</execution>
@@ -250,20 +258,7 @@
 							<fail>true</fail>
 						</configuration>
 					</execution>
-					<execution>
-						<id>enforce java runtime version</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireJavaVersion>
-									<version>[1.8,1.9)</version>
-									<message>Check for JDK version failed: 1.8 required, higher versions are not yet supported</message>
-								</requireJavaVersion>
-							</rules>
-						</configuration>
-					</execution>
+					
 				</executions>
 			</plugin>
 			<plugin>
@@ -488,11 +483,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
 					<version>3.2.0</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-shade-plugin</artifactId>
-					<version>3.1.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
