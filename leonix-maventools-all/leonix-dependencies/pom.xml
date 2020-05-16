@@ -18,8 +18,7 @@
 		<dropwizard.metrics.version>3.2.6</dropwizard.metrics.version> <!-- can't update to 4.x.x , because of cxf which depends on the older version com/codahale/metrics/ObjectNameFactory -->
 		<maven.version>3.5.2</maven.version>
 		<jetty.version>9.4.20.v20190813</jetty.version>
-		
-		<jackson.version>2.9.9</jackson.version>
+		<jackson.version>2.10.4</jackson.version>
 		<simpleclient.version>0.6.0</simpleclient.version>
 		<apache.ftp.version>1.1.0</apache.ftp.version>
 		<apache.ssh.version>2.2.0</apache.ssh.version>
@@ -37,11 +36,6 @@
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-core</artifactId>
 				<version>${logback.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.oracle</groupId>
-				<artifactId>jfxrt</artifactId>
-				<version>1.8.0_60</version>
 			</dependency>
 			
 			<dependency>
@@ -70,16 +64,6 @@
 				<version>3.2.2</version>
 			</dependency>
 			<dependency>
-				<groupId>commons-dbcp</groupId>
-				<artifactId>commons-dbcp</artifactId>
-				<version>1.4</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-digester</groupId>
-				<artifactId>commons-digester</artifactId>
-				<version>2.1</version>
-			</dependency>
-			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
 				<version>2.6</version>
@@ -89,17 +73,18 @@
 				<artifactId>commons-net</artifactId>
 				<version>3.6</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>com.addthis.metrics</groupId>
 				<artifactId>reporter-config3</artifactId>
 				<version>3.2.2</version>
 			</dependency>
-	
 			<dependency>
 				<groupId>com.ecwid.consul</groupId>
 				<artifactId>consul-api</artifactId>
 				<version>1.4.2</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
@@ -113,13 +98,14 @@
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
-				<version>2.9.10.4</version>
+				<version>${jackson.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.dataformat</groupId>
 				<artifactId>jackson-dataformat-xml</artifactId>
 				<version>${jackson.version}</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>com.fasterxml.woodstox</groupId>
 				<artifactId>woodstox-core</artifactId>
@@ -135,12 +121,7 @@
 				<artifactId>guice</artifactId>
 				<version>4.2.2</version>
 			</dependency>
-		
-			<dependency>
-				<groupId>com.ibm.icu</groupId>
-				<artifactId>icu4j</artifactId>
-				<version>61.1</version>
-			</dependency>
+			
 			<dependency>
 				<groupId>com.jgoodies</groupId>
 				<artifactId>forms</artifactId>
@@ -271,7 +252,6 @@
 				<artifactId>metrics-core</artifactId>
 				<version>2.2.0</version>
 			</dependency>
-			
 			<dependency>
 				<groupId>edu.stanford.ejalbert</groupId>
 				<artifactId>BrowserLauncher</artifactId>
@@ -401,20 +381,6 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
-			
-			
-			<dependency>
-				<groupId>net.sourceforge.saxon</groupId>
-				<artifactId>saxon</artifactId>
-				<version>9.1.0.8</version>
-			</dependency>
-			<dependency>
-				<groupId>net.sourceforge.saxon</groupId>
-				<artifactId>saxon</artifactId>
-				<classifier>dom</classifier>
-				<version>9.1.0.8</version>
-			</dependency>
-			
 			
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -662,11 +628,7 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
-			<dependency>
-				<groupId>org.apache.derby</groupId>
-				<artifactId>derby</artifactId>
-				<version>10.14.1.0</version>
-			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.ftpserver</groupId>
 				<artifactId>ftplet-api</artifactId>
@@ -703,11 +665,7 @@
 				<artifactId>httpasyncclient</artifactId>
 				<version>4.1.3</version>
 			</dependency>
-			<dependency>
-				<groupId>org.apache.lucene</groupId>
-				<artifactId>lucene-core</artifactId>
-				<version>7.2.0</version>
-			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.maven.doxia</groupId>
 				<artifactId>doxia-core</artifactId>
@@ -755,6 +713,7 @@
 				<artifactId>maven-plugin-api</artifactId>
 				<version>${maven.version}</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -812,11 +771,6 @@
 				<artifactId>mina-core</artifactId>
 				<version>2.1.3</version>
 				<type>jar</type>
-			</dependency>
-			<dependency>
-				<groupId>org.adjective</groupId>
-				<artifactId>orthodox</artifactId>
-				<version>0.5.0</version>
 			</dependency>
 			
 			<dependency>
@@ -915,12 +869,6 @@
 				<artifactId>sshd-common</artifactId>
 				<version>${apache.ssh.version}</version>
 			</dependency>
-				
-			<dependency>
-				<groupId>org.apache.thrift</groupId>
-				<artifactId>libthrift</artifactId>
-				<version>0.12.0</version>
-			</dependency>
 			
 			<dependency>
 				<groupId>org.apache.xmlbeans</groupId>
@@ -947,22 +895,7 @@
 				<artifactId>bcpkix-jdk15on</artifactId>
 				<version>1.61</version>
 			</dependency>
-			<dependency>
-				<groupId>org.codehaus.janino</groupId>
-				<artifactId>janino</artifactId>
-				<version>3.1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>org.codehaus.jettison</groupId>
-				<artifactId>jettison</artifactId>
-				<version>1.4.0</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>stax-api</artifactId>
-						<groupId>stax</groupId>
-					</exclusion>
-				</exclusions>
-			</dependency>
+			
 			<dependency>
 				<groupId>org.codehaus.plexus</groupId>
 				<artifactId>plexus-classworlds</artifactId>
@@ -1041,9 +974,9 @@
 				<version>${jetty.version}</version>
 			</dependency>
 			<dependency>
-				 <groupId>org.jdom</groupId>
-				 <artifactId>jdom</artifactId>
-				 <version>1.1.3</version>
+				<groupId>org.jdom</groupId>
+				<artifactId>jdom</artifactId>
+				<version>1.1.3</version>
 			</dependency>
 			<dependency>
 				<groupId>org.magicwerk</groupId>
@@ -1132,11 +1065,6 @@
 				<groupId>org.yaml</groupId>
 				<artifactId>snakeyaml</artifactId>
 				<version>1.25</version>
-			</dependency>
-			<dependency>
-				<groupId>postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<version>9.1-901-1.jdbc4</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
