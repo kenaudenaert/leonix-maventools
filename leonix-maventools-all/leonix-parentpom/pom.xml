@@ -4,7 +4,7 @@
 	
 	<groupId>be.leonix</groupId>
 	<artifactId>leonix-parentpom</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.8.0-SNAPSHOT</version><!-- uses java-version -->
 	<packaging>pom</packaging>
 	
 	<properties>

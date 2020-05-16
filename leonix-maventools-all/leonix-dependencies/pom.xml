@@ -4,7 +4,7 @@
 	
 	<groupId>be.leonix</groupId>
 	<artifactId>leonix-dependencies</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>0.6.0-SNAPSHOT</version><!-- uses release-month -->
 	<packaging>pom</packaging>
 	
 	<properties>
