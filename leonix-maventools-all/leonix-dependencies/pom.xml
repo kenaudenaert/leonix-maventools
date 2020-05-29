@@ -11,10 +11,10 @@
 		<jide.version>3.7.0</jide.version>
 		<spring.version>4.3.16.RELEASE</spring.version>
 		<logback.version>1.2.3</logback.version>
-		<slf4j.version>1.7.28</slf4j.version>
+		<slf4j.version>1.7.30</slf4j.version>
 		<poi.version>4.1.0</poi.version>
 		<jna.version>3.4.1</jna.version>
-		<cxf.version>3.2.9</cxf.version>
+		<cxf.version>3.3.6</cxf.version>
 		<dropwizard.metrics.version>3.2.6</dropwizard.metrics.version> <!-- can't update to 4.x.x , because of cxf which depends on the older version com/codahale/metrics/ObjectNameFactory -->
 		<maven.version>3.5.2</maven.version>
 		<jetty.version>9.4.20.v20190813</jetty.version>
@@ -306,6 +306,11 @@
 				<version>1</version>
 			</dependency>
 			<dependency>
+				<groupId>javax.annotation</groupId>
+				<artifactId>javax.annotation-api</artifactId>
+				<version>1.3.1</version>
+			</dependency>
+			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>javax.servlet-api</artifactId>
 				<version>4.0.1</version>
@@ -392,16 +397,6 @@
 						<artifactId>objenesis</artifactId>
 					</exclusion>
 				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-csv</artifactId>
-				<version>1.5</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-exec</artifactId>
-				<version>1.3</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -876,11 +871,6 @@
 				<version>3.1.0</version>
 			</dependency>
 			<dependency>
-				<groupId>org.beanshell</groupId>
-				<artifactId>bsh</artifactId>
-				<version>2.0b5</version>
-			</dependency>
-			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcmail-jdk15on</artifactId>
 				<version>1.61</version>
@@ -1055,11 +1045,6 @@
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>jetty</artifactId>
 				<version>6.1.26</version>
-			</dependency>
-			<dependency>
-				<groupId>org.twitter4j</groupId>
-				<artifactId>twitter4j-core</artifactId>
-				<version>4.0.7</version>
 			</dependency>
 			<dependency>
 				<groupId>org.yaml</groupId>
