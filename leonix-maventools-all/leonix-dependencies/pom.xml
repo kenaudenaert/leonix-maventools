@@ -8,6 +8,7 @@
 	<packaging>pom</packaging>
 	
 	<properties>
+		<maven.version>3.6.3</maven.version>
 		<jide.version>3.7.0</jide.version>
 		<spring.version>4.3.16.RELEASE</spring.version>
 		<logback.version>1.2.3</logback.version>
@@ -16,7 +17,6 @@
 		<jna.version>3.4.1</jna.version>
 		<cxf.version>3.3.6</cxf.version>
 		<dropwizard.metrics.version>3.2.6</dropwizard.metrics.version> <!-- can't update to 4.x.x , because of cxf which depends on the older version com/codahale/metrics/ObjectNameFactory -->
-		<maven.version>3.5.2</maven.version>
 		<jetty.version>9.4.20.v20190813</jetty.version>
 		<jackson.version>2.10.4</jackson.version>
 		<simpleclient.version>0.6.0</simpleclient.version>
