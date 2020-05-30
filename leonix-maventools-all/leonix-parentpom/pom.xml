@@ -248,11 +248,10 @@
 										<ignoreClass>org.cyberneko.html.*</ignoreClass>
 										<ignoreClass>com.ibm.dickens.util.Timer</ignoreClass>
 										
-										<!-- JDK 9+ removed Java APIs -->
+										<!-- JDK 11 removed Java APIs -->
 										<ignoreClass>javax.annotation.*</ignoreClass>
 										<ignoreClass>javax.activation.*</ignoreClass>
 										<ignoreClass>com.sun.activation.*</ignoreClass>
-										
 										<ignoreClass>javax.xml.soap.*</ignoreClass>
 										<ignoreClass>javax.xml.ws.*</ignoreClass>
 										<ignoreClass>javax.jws.*</ignoreClass>
@@ -260,6 +259,10 @@
 										<!-- Standard way of providing module info in several packages -->
 										<ignoreClass>module-info</ignoreClass>
 									</ignoreClasses>
+									<scopes>
+										<scope>compile</scope>
+										<scope>runtime</scope>
+									</scopes>
 									<findAllDuplicates>true</findAllDuplicates>
 								</banDuplicateClasses>
 							</rules>
