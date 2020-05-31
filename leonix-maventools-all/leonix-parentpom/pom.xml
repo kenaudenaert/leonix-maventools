@@ -244,17 +244,6 @@
 										<ignoreClass>org.rzo.yajsw.boot.*</ignoreClass>
 										<ignoreClass>org.rzo.yajsw.log.*</ignoreClass>
 										<ignoreClass>com.sun.jna.Platform</ignoreClass>
-										<ignoreClass>org.w3c.dom.*</ignoreClass>
-										<ignoreClass>org.cyberneko.html.*</ignoreClass>
-										<ignoreClass>com.ibm.dickens.util.Timer</ignoreClass>
-										
-										<!-- JDK 11 removed Java APIs -->
-										<ignoreClass>javax.annotation.*</ignoreClass>
-										<ignoreClass>javax.activation.*</ignoreClass>
-										<ignoreClass>com.sun.activation.*</ignoreClass>
-										<ignoreClass>javax.xml.soap.*</ignoreClass>
-										<ignoreClass>javax.xml.ws.*</ignoreClass>
-										<ignoreClass>javax.jws.*</ignoreClass>
 										
 										<!-- Standard way of providing module info in several packages -->
 										<ignoreClass>module-info</ignoreClass>

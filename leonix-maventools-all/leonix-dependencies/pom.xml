@@ -15,9 +15,8 @@
 		<poi.version>4.1.2</poi.version>
 		<jna.version>3.4.1</jna.version>
 		<cxf.version>3.3.6</cxf.version>
+		<!-- can't update to 4.x.x because of cxf -->
 		<dropwizard.metrics.version>3.2.6</dropwizard.metrics.version>
-		<!-- can't update to 4.x.x , because of cxf which depends on the older version 
-			com/codahale/metrics/ObjectNameFactory -->
 		<jetty.version>9.4.20.v20190813</jetty.version>
 		<jackson.version>2.11.0</jackson.version>
 		<simpleclient.version>0.9.0</simpleclient.version>
@@ -292,7 +291,6 @@
 				<version>2.1.1</version>
 			</dependency>
 			
-			
 			<dependency>
 				<!-- jdk: javax.annotation:javax.annotation-api -->
 				<groupId>jakarta.annotation</groupId>
@@ -312,6 +310,7 @@
 				<artifactId>jakarta.activation</artifactId>
 				<version>1.2.2</version>
 			</dependency>
+			
 			<dependency>
 				<!-- jdk: javax.xml.bind:jaxb-api -->
 				<groupId>jakarta.xml.bind</groupId>
@@ -323,6 +322,7 @@
 				<artifactId>jaxb-impl</artifactId>
 				<version>2.3.3</version>
 			</dependency>
+			
 			<dependency>
 				<!-- jdk: javax.xml.ws:jaxws-api -->
 				<groupId>jakarta.xml.ws</groupId>
@@ -330,9 +330,16 @@
 				<version>2.3.3</version>
 			</dependency>
 			<dependency>
-				<groupId>com.sun.xml.ws</groupId>
-				<artifactId>jaxws-rt</artifactId>
-				<version>2.3.3</version>
+				<!-- jdk: javax.xml.soap:javax.xml.soap-api -->
+				<groupId>jakarta.xml.soap</groupId>
+				<artifactId>jakarta.xml.soap-api</artifactId>
+				<version>1.4.2</version>
+			</dependency>
+			<dependency>
+				<!-- jdk: javax.jws:javax.jws-api -->
+				<groupId>jakarta.jws</groupId>
+				<artifactId>jakarta.jws-api</artifactId>
+				<version>2.1.0</version>
 			</dependency>
 			
 			<dependency>
