@@ -13,15 +13,17 @@
 		<spring.version>4.3.16.RELEASE</spring.version>
 		<logback.version>1.2.3</logback.version>
 		<slf4j.version>1.7.30</slf4j.version>
-		<poi.version>4.1.0</poi.version>
+		<poi.version>4.1.2</poi.version>
 		<jna.version>3.4.1</jna.version>
 		<cxf.version>3.3.6</cxf.version>
-		<dropwizard.metrics.version>3.2.6</dropwizard.metrics.version> <!-- can't update to 4.x.x , because of cxf which depends on the older version com/codahale/metrics/ObjectNameFactory -->
+		<dropwizard.metrics.version>3.2.6</dropwizard.metrics.version>
+		<!-- can't update to 4.x.x , because of cxf which depends on the older version 
+			com/codahale/metrics/ObjectNameFactory -->
 		<jetty.version>9.4.20.v20190813</jetty.version>
-		<jackson.version>2.10.4</jackson.version>
-		<simpleclient.version>0.6.0</simpleclient.version>
-		<apache.ftp.version>1.1.0</apache.ftp.version>
-		<apache.ssh.version>2.2.0</apache.ssh.version>
+		<jackson.version>2.11.0</jackson.version>
+		<simpleclient.version>0.9.0</simpleclient.version>
+		<apache.ftp.version>1.1.1</apache.ftp.version>
+		<apache.ssh.version>2.4.0</apache.ssh.version>
 		<jersey.version>2.26</jersey.version>
 	</properties>
 	
@@ -42,31 +44,16 @@
 				<groupId>commons-cli</groupId>
 				<artifactId>commons-cli</artifactId>
 				<version>1.4</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>junit</artifactId>
-						<groupId>junit</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>commons-logging</artifactId>
-						<groupId>commons-logging</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.13</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-collections</groupId>
-				<artifactId>commons-collections</artifactId>
-				<version>3.2.2</version>
+				<version>1.14</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.6</version>
+				<version>2.7</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-net</groupId>
@@ -82,7 +69,7 @@
 			<dependency>
 				<groupId>com.ecwid.consul</groupId>
 				<artifactId>consul-api</artifactId>
-				<version>1.4.2</version>
+				<version>1.4.5</version>
 			</dependency>
 			
 			<dependency>
@@ -109,28 +96,28 @@
 			<dependency>
 				<groupId>com.fasterxml.woodstox</groupId>
 				<artifactId>woodstox-core</artifactId>
-				<version>5.3.0</version>
+				<version>6.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
-				<version>25.1-jre</version>
+				<version>29.0-jre</version>
 			</dependency>
 			<dependency>
 			<groupId>com.google.inject</groupId>
 				<artifactId>guice</artifactId>
-				<version>4.2.2</version>
+				<version>4.2.3</version>
 			</dependency>
 			
 			<dependency>
 				<groupId>com.jgoodies</groupId>
 				<artifactId>forms</artifactId>
-				<version>1.2.1</version>
+				<version>1.2.1</version><!-- 10 years old -->
 			</dependency>
 			<dependency>
 				<groupId>com.jgoodies</groupId>
 				<artifactId>looks</artifactId>
-				<version>2.2.2</version>
+				<version>2.2.2</version><!-- 10 years old -->
 			</dependency>
 			
 			<!-- JIDE API -->
@@ -233,18 +220,19 @@
 			<dependency>
 				<groupId>com.sun</groupId>
 				<artifactId>tools</artifactId>
-				<version>1.6.0_31</version>
+				<version>1.6.0_31</version><!-- 10 years old -->
 				<scope>provided</scope>
 			</dependency>
+			
 			<dependency>
 				<groupId>com.sun.mail</groupId>
 				<artifactId>imap</artifactId>
-				<version>1.5.6</version>
+				<version>1.6.5</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.mail</groupId>
 				<artifactId>mailapi</artifactId>
-				<version>1.6.3</version>
+				<version>1.6.5</version>
 			</dependency>
 			
 			<dependency>
@@ -255,7 +243,7 @@
 			<dependency>
 				<groupId>edu.stanford.ejalbert</groupId>
 				<artifactId>BrowserLauncher</artifactId>
-				<version>2.1.3</version>
+				<version>2.1.3</version><!-- 10 years old -->
 			</dependency>
 			
 			<dependency>
@@ -306,26 +294,28 @@
 				<version>2.1.1</version>
 			</dependency>
 			
-			<!-- JDK: javax.annotation:javax.annotation-api -->
+			
 			<dependency>
+				<!-- jdk: javax.annotation:javax.annotation-api -->
 				<groupId>jakarta.annotation</groupId>
 				<artifactId>jakarta.annotation-api</artifactId>
 				<version>1.3.5</version>
 			</dependency>
-			<!-- JDK: javax.activation:javax.activation-api -->
+			
 			<dependency>
+				<!-- jdk: javax.activation:javax.activation-api -->
 				<groupId>jakarta.activation</groupId>
 				<artifactId>jakarta.activation-api</artifactId>
 				<version>1.2.2</version>
 			</dependency>
-			<!-- JDK: com.sun.activation:javax.activation -->
 			<dependency>
+				<!-- jdk: com.sun.activation:javax.activation -->
 				<groupId>com.sun.activation</groupId>
 				<artifactId>jakarta.activation</artifactId>
 				<version>1.2.2</version>
 			</dependency>
-			<!-- JDK: javax.xml.bind:jaxb-api -->
 			<dependency>
+				<!-- jdk: javax.xml.bind:jaxb-api -->
 				<groupId>jakarta.xml.bind</groupId>
 				<artifactId>jakarta.xml.bind-api</artifactId>
 				<version>2.3.3</version>
@@ -335,8 +325,8 @@
 				<artifactId>jaxb-impl</artifactId>
 				<version>2.3.3</version>
 			</dependency>
-			<!-- JDK: javax.xml.ws:jaxws-api -->
 			<dependency>
+				<!-- jdk: javax.xml.ws:jaxws-api -->
 				<groupId>jakarta.xml.ws</groupId>
 				<artifactId>jakarta.xml.ws-api</artifactId>
 				<version>2.3.3</version>
@@ -348,49 +338,20 @@
 			</dependency>
 			
 			<dependency>
-				<groupId>jaxen</groupId>
-				<artifactId>jaxen</artifactId>
-				<version>1.1.6</version>
-				<exclusions>
-					<exclusion>
-						<groupId>xml-apis</groupId>
-						<artifactId>xml-apis</artifactId>
-					</exclusion>
-					<exclusion>
-						<artifactId>jdom</artifactId>
-						<groupId>jdom</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>xmlParserAPIs</artifactId>
-						<groupId>xerces</groupId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
 				<groupId>jfree</groupId>
 				<artifactId>jfreechart</artifactId>
-				<version>1.0.13</version>
+				<version>1.0.13</version><!-- cannot upgrade !! -->
 			</dependency>
 			<dependency>
 				<groupId>jfree</groupId>
 				<artifactId>jcommon</artifactId>
-				<version>1.0.16</version>
-			</dependency>
-			<dependency>
-				<groupId>jgraph</groupId>
-				<artifactId>jgraph</artifactId>
-				<version>3.1</version>
-			</dependency>
-			<dependency>
-				<groupId>joda-time</groupId>
-				<artifactId>joda-time</artifactId>
-				<version>2.10.3</version>
+				<version>1.0.16</version><!-- cannot upgrade !! -->
 			</dependency>
 			
 			<dependency>
 				<groupId>net.i2p.crypto</groupId>
 				<artifactId>eddsa</artifactId>
-				<version>0.2.0</version>
+				<version>0.3.0</version>
 			</dependency>
 			<dependency>
 				<groupId>net.java.dev.jna</groupId>
@@ -417,90 +378,28 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-compress</artifactId>
-				<version>1.19</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.objenesis</groupId>
-						<artifactId>objenesis</artifactId>
-					</exclusion>
-				</exclusions>
+				<version>1.20</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.9</version>
+				<version>3.10</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-math3</artifactId>
 				<version>3.6.1</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>commons-logging</artifactId>
-						<groupId>commons-logging</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-collections4</artifactId>
 				<version>4.4</version>
 			</dependency>
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-text</artifactId>
-				<version>1.8</version>
-			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-core</artifactId>
 				<version>${cxf.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>commons-logging</artifactId>
-						<groupId>commons-logging</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-annotation_1.0_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-activation_1.1_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>spring-context</artifactId>
-						<groupId>org.springframework</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>spring-beans</artifactId>
-						<groupId>org.springframework</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>spring-core</artifactId>
-						<groupId>org.springframework</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-stax-api_1.0_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-javamail_1.4_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>jaxb-api</artifactId>
-						<groupId>javax.xml.bind</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>wstx-asl</artifactId>
-						<groupId>org.codehaus.woodstox</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>woodstox-core-asl</artifactId>
-						<groupId>org.codehaus.woodstox</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
@@ -521,98 +420,16 @@
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 				<version>${cxf.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-jaxws_2.1_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>saaj-api</artifactId>
-						<groupId>javax.xml.soap</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>saaj-impl</artifactId>
-						<groupId>com.sun.xml.messaging.saaj</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-activation_1.1_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>xml-resolver</artifactId>
-						<groupId>xml-resolver</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-frontend-jaxws</artifactId>
 				<version>${cxf.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-jaxws_2.1_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>saaj-api</artifactId>
-						<groupId>javax.xml.soap</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>saaj-impl</artifactId>
-						<groupId>com.sun.xml.messaging.saaj</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-activation_1.1_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>xml-resolver</artifactId>
-						<groupId>xml-resolver</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-frontend-simple</artifactId>
 				<version>${cxf.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>saaj-api</artifactId>
-						<groupId>javax.xml.soap</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-activation_1.1_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>spring-core</artifactId>
-						<groupId>org.springframework</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-javamail_1.4_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>jaxb-impl</artifactId>
-						<groupId>com.sun.xml.bind</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>jaxb-api</artifactId>
-						<groupId>javax.xml.bind</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>wstx-asl</artifactId>
-						<groupId>org.codehaus.woodstox</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
@@ -628,27 +445,11 @@
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-transports-http</artifactId>
 				<version>${cxf.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>commons-logging</artifactId>
-						<groupId>commons-logging</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>spring-web</artifactId>
-						<groupId>org.springframework</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-transports-http-jetty</artifactId>
 				<version>${cxf.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>spring-web</artifactId>
-						<groupId>org.springframework</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			
 			<dependency>
@@ -661,15 +462,16 @@
 				<artifactId>ftpserver-core</artifactId>
 				<version>${apache.ftp.version}</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpcore</artifactId>
-				<version>4.4.12</version>
+				<version>4.4.13</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpclient</artifactId>
-				<version>4.5.10</version>
+				<version>4.5.12</version>
 				<exclusions>
 					<exclusion>
 						<artifactId>commons-logging</artifactId>
@@ -680,41 +482,30 @@
 			<dependency>
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpmime</artifactId>
-				<version>4.5.10</version>
+				<version>4.5.12</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpasyncclient</artifactId>
-				<version>4.1.3</version>
+				<version>4.1.4</version>
 			</dependency>
 			
 			<dependency>
 				<groupId>org.apache.maven.doxia</groupId>
 				<artifactId>doxia-core</artifactId>
-				<version>1.7</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>commons-logging</artifactId>
-						<groupId>commons-logging</groupId>
-					</exclusion>
-				</exclusions>
+				<version>1.9.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.maven.doxia</groupId>
 				<artifactId>doxia-sink-api</artifactId>
-				<version>1.7</version>
+				<version>1.9.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.maven.doxia</groupId>
 				<artifactId>doxia-site-renderer</artifactId>
-				<version>1.0</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>junit</artifactId>
-						<groupId>junit</groupId>
-					</exclusion>
-				</exclusions>
+				<version>1.9.2</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-artifact</artifactId>
@@ -737,37 +528,21 @@
 			</dependency>
 			
 			<dependency>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.0.2</version>
-			</dependency>
-			<dependency>
 				<groupId>org.apache.maven.plugin-tools</groupId>
 				<artifactId>maven-plugin-annotations</artifactId>
-				<version>3.1</version>
+				<version>3.6.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-project</artifactId>
 				<version>2.2.1</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>junit</artifactId>
-						<groupId>junit</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-plugin-descriptor</artifactId>
 				<version>2.2.1</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>junit</artifactId>
-						<groupId>junit</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.maven.reporting</groupId>
 				<artifactId>maven-reporting-api</artifactId>
@@ -776,17 +551,7 @@
 			<dependency>
 				<groupId>org.apache.maven.reporting</groupId>
 				<artifactId>maven-reporting-impl</artifactId>
-				<version>2.2</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>commons-logging</artifactId>
-						<groupId>commons-logging</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>xml-apis</artifactId>
-						<groupId>xml-apis</groupId>
-					</exclusion>
-				</exclusions>
+				<version>3.0.0</version>
 			</dependency>
 			
 			<dependency>
@@ -828,60 +593,25 @@
 						<artifactId>commons-logging</artifactId>
 						<groupId>commons-logging</groupId>
 					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-stax-api_1.0_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>xml-apis</artifactId>
-						<groupId>xml-apis</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>stax-api</artifactId>
-						<groupId>stax</groupId>
-					</exclusion>
 				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.poi</groupId>
 				<artifactId>poi-ooxml-schemas</artifactId>
 				<version>${poi.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>log4j</artifactId>
-						<groupId>log4j</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>commons-logging</artifactId>
-						<groupId>commons-logging</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>geronimo-stax-api_1.0_spec</artifactId>
-						<groupId>org.apache.geronimo.specs</groupId>
-					</exclusion>
-					<exclusion>
-						<artifactId>stax-api</artifactId>
-						<groupId>stax</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.poi</groupId>
 				<artifactId>poi-scratchpad</artifactId>
 				<version>${poi.version}</version>
 			</dependency>
-			<!-- contains the FULL xml schema's as opposed to poi-ooxml-schemas -->
 			<dependency>
+				<!-- contains the FULL xml schema's as opposed to poi-ooxml-schemas -->
 				<groupId>org.apache.poi</groupId>
 				<artifactId>ooxml-schemas</artifactId>
-				<version>1.3</version>
-				<exclusions>
-					<exclusion>
-						<groupId>stax</groupId>
-						<artifactId>stax-api</artifactId>
-					</exclusion>
-				</exclusions>
+				<version>1.4</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.sshd</groupId>
 				<artifactId>sshd-core</artifactId>
@@ -901,17 +631,17 @@
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcmail-jdk15on</artifactId>
-				<version>1.61</version>
+				<version>1.64</version>
 			</dependency>
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcprov-jdk15on</artifactId>
-				<version>1.61</version>
+				<version>1.64</version>
 			</dependency>
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcpkix-jdk15on</artifactId>
-				<version>1.61</version>
+				<version>1.64</version>
 			</dependency>
 			
 			<dependency>
@@ -928,13 +658,7 @@
 			<dependency>
 				<groupId>org.codehaus.woodstox</groupId>
 				<artifactId>stax2-api</artifactId>
-				<version>4.2</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>stax-api</artifactId>
-						<groupId>javax.xml.stream</groupId>
-					</exclusion>
-				</exclusions>
+				<version>4.2.1</version>
 			</dependency>
 			
 			<dependency>
@@ -992,16 +716,13 @@
 				<artifactId>websocket-servlet</artifactId>
 				<version>${jetty.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>org.jdom</groupId>
-				<artifactId>jdom</artifactId>
-				<version>1.1.3</version>
-			</dependency>
+
 			<dependency>
 				<groupId>org.magicwerk</groupId>
 				<artifactId>brownies-collections</artifactId>
-				<version>0.9.13</version>
+				<version>0.9.14</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>org.rzo.yajsw</groupId>
 				<artifactId>yajsw-wrapper</artifactId>
@@ -1039,21 +760,17 @@
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>org.simplericity.macify</groupId>
 				<artifactId>macify</artifactId>
-				<version>1.6</version>
+				<version>1.6</version><!-- 10 years old -->
 			</dependency>
-			
 			<dependency>
 				<groupId>org.testng</groupId>
 				<artifactId>testng</artifactId>
-				<version>6.9.4</version>
+				<version>7.1.0</version>
 				<exclusions>
-					<exclusion>
-						<artifactId>junit</artifactId>
-						<groupId>junit</groupId>
-					</exclusion>
 					<exclusion>
 						<artifactId>guice</artifactId>
 						<groupId>com.google.inject</groupId>
@@ -1062,23 +779,13 @@
 			</dependency>
 			<dependency>
 				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>1.9.5</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mockito</groupId>
 				<artifactId>mockito-core</artifactId>
-				<version>2.15.0</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty</artifactId>
-				<version>6.1.26</version>
+				<version>3.3.3</version>
 			</dependency>
 			<dependency>
 				<groupId>org.yaml</groupId>
 				<artifactId>snakeyaml</artifactId>
-				<version>1.25</version>
+				<version>1.26</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
