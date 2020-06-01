@@ -89,6 +89,11 @@
 				<artifactId>jackson-dataformat-xml</artifactId>
 				<version>${jackson.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.datatype</groupId>
+				<artifactId>jackson-datatype-joda</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
 			
 			<dependency>
 				<groupId>com.fasterxml.woodstox</groupId>
@@ -110,11 +115,6 @@
 				<groupId>com.jgoodies</groupId>
 				<artifactId>forms</artifactId>
 				<version>1.2.1</version><!-- 10 years old -->
-			</dependency>
-			<dependency>
-				<groupId>com.jgoodies</groupId>
-				<artifactId>looks</artifactId>
-				<version>2.2.2</version><!-- 10 years old -->
 			</dependency>
 			
 			<!-- JIDE API -->
@@ -237,6 +237,7 @@
 				<artifactId>metrics-core</artifactId>
 				<version>2.2.0</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>edu.stanford.ejalbert</groupId>
 				<artifactId>BrowserLauncher</artifactId>
@@ -362,11 +363,6 @@
 				<groupId>net.java.dev.jna</groupId>
 				<artifactId>jna</artifactId>
 				<version>${jna.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>net.java.dev.msv</groupId>
-				<artifactId>msv-core</artifactId>
-				<version>2013.6.1</version>
 			</dependency>
 			<dependency>
 				<groupId>net.java.dev.stax-utils</groupId>
@@ -771,6 +767,7 @@
 				<artifactId>macify</artifactId>
 				<version>1.6</version><!-- 10 years old -->
 			</dependency>
+			
 			<dependency>
 				<groupId>org.testng</groupId>
 				<artifactId>testng</artifactId>
