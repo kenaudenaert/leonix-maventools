@@ -102,7 +102,6 @@
 							<failsOnError>true</failsOnError>
 							<includeTestSourceDirectory>false</includeTestSourceDirectory>
 							<consoleOutput>true</consoleOutput>
-							<excludes>**/module-info.java</excludes>
 						</configuration>
 					</execution>
 				</executions>
