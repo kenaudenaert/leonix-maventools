@@ -32,7 +32,7 @@ public class PrintStackTraceCheck extends AbstractCheck {
 	}
 	
 	private static List<DetailAST> findChildASTsOfType(DetailAST parent, int type) {
-		List<DetailAST> children = new ArrayList<DetailAST>();
+		List<DetailAST> children = new ArrayList<>();
 		
 		DetailAST child = parent.getFirstChild();
 		while (child != null) {
